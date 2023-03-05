@@ -1,0 +1,63 @@
+.adder {
+	right: 30px;
+	bottom: 30px;
+}
+
+.starter {
+	left: 30px;
+	bottom: 30px;
+}
+
+.ml-imp-1 {
+	margin-left: 10px;
+}
+
+.uptiletext {
+	font-size: 50px;
+	text-decoration: bold;
+}
+
+.secondtiletext {
+	font-size: 35px;
+}
+
+.texttiletext {
+	font-size: 30px;
+}
+#statusButton2{
+	position:absolute;
+	left: 200px;
+}
+#SelectMove{
+	height:100%;
+	width:10%;
+	position:absolute;
+	right:0px;
+	top:0px;
+	border:1px solid black;
+}
+#clockplus,#clockmoins{
+	display:flex;
+	width:30px;
+	height:29px;
+	justify-content:center;
+}
+#clockplus{
+	margin-top:23px;
+}
+#clockmoins{
+	margin-top:0px;
+}
+#statusButton3{
+	position:absolute;
+	left: 360px;
+}
+#setting{
+	width:120px;
+	visibility:hidden;
+	border:1px solid black;
+}
+#statusButton4{
+	position:absolute;
+	left: 460px;
+}

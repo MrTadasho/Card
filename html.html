@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<title>DS Horaires</title>
+</head>
+<body>
+	<div id="SelectMove"></div>
+	<button type="button" class="btn btn-outline-dark position-absolute adder" data-bs-toggle="modal" data-bs-target="#exampleModal" id="boutonplus">
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+	  		<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+		</svg>
+	</button>
+
+	<button type="button" class="btn btn-outline-dark position-absolute starter" onclick="buttonDS();" id="statusButton">
+		Commencer le DS
+	</button>
+	<button type="button" class="btn btn-outline-dark position-absolute starter" onclick="removeds();" id="statusButton2">
+		Supprimer le DS
+	</button>
+	<button type="button" class="btn btn-outline-dark position-absolute starter" onclick="ShowSetting(this);" id="statusButton3">
+		Cacher
+	</button>
+	<button type="button" class="btn btn-outline-dark position-absolute starter" onclick="Set();" id="statusButton4">
+		Réglage texte
+	</button>
+
+
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Rajouter une séance de DS</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        
+	      	<div class="input-group mb-3">
+			  <span class="input-group-text" id="basic-addon1">Matière</span>
+			  <input type="text" class="form-control" placeholder="Matière" aria-label="Matière" aria-describedby="basic-addon1" id="form-matiere">
+			</div>
+
+			<div class="input-group mb-3">
+			  <span class="input-group-text" id="basic-addon1">Groupe</span>
+			  <input type="text" class="form-control" placeholder="Groupe" aria-label="Groupe" aria-describedby="basic-addon1" id="form-groupe">
+			</div>
+
+			<div class="input-group mb-3">
+			  <span class="input-group-text" id="basic-addon1">Professeur</span>
+			  <input type="text" class="form-control" placeholder="Laisser vide si tous" aria-label="Groupe" aria-describedby="basic-addon1" id="form-professeur">
+			</div>
+
+			<div class="input-group mb-3">
+			  <span class="input-group-text" id="basic-addon1">Durée totale</span>
+			  <input type="text" class="form-control" placeholder="Durée" aria-label="duree" aria-describedby="basic-addon1" id="form-duree">
+			</div>
+
+			<div class="input-group mb-3">
+			  <span class="input-group-text" id="basic-addon1">Heure de début</span>
+			  <input type="text" class="form-control" placeholder="Heure de début" aria-label="debut" aria-describedby="basic-addon1" id="form-debut">
+			</div>
+
+
+
+
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+	        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="createTile();">Rajouter</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="container-sm px-5 pt-5">
+
+		<div id="tileHolder" class="d-flex flex-column column">
+			
+			<!-- <div class="card text-black bg-white mb-3 mx-2" style="max-width: 18rem;">
+			  <div class="card-header d-flex align-items-center">
+			  	<p class="my-1">DS Maths</p>
+
+				<div class="form-check ml-imp-1">
+				  	<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked />
+				</div>
+
+				</div>
+			  <div class="card-body">
+			    <h5 class="card-title">Professeur: Mr Quillard</h5>
+			    <p class="card-text my-1">Heure de début: 15:00</p>
+			    <p class="card-text my-1">Heure de fin: 17:00</p>
+			  </div>
+			</div> -->
+
+
+
+		
+
+		
+
+		<div class="layer d-flex justify-content-center" id="clockHolder2">
+			<h1 id="clockHolder" class="display-1"></h1>
+			<div id="">
+			<button id="clockplus" onclick="clockplus()">+</button>
+			<button id="clockmoins" onclick="clockmoins()">-</button>
+			</div>
+		</div>
+
+		<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="font-size:50px; margin-top:20px;"></textarea>
+		</div>
+		
+
+	</div>
+	<div id="setting">
+		<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+	</div>
+
+	<script type="text/javascript" src="index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
