@@ -457,14 +457,17 @@ function shodepe2(){
 }
 var isHide=false;
 function Hide(){
+	var but = document.getElementById('hide');
 	var lis = [bplus,bmns,shodepe,bpl,statusButton,statusButton2];
 	for(var i=0;i<lis.length;i++){
 		console.log(lis[i]);
 		if(isHide){
 		lis[i].style.visibility='visible';
+		but.style.left="460px";
 		}
 		else{
 		lis[i].style.visibility='hidden';
+		but.style.left="20px";
 	}
 	}
 	isHide=!isHide;
