@@ -279,11 +279,11 @@ function changeselect(k) {
 function changelock(k,div){
 	lockds[k-1] = !lockds[k-1];
 	if(lockds[k-1]){
-		div.style.backgroundImage=" url('locked.png')";
+		div.style.backgroundImage=" url('locked.PNG')";
 		div.style.backgroundSize=" 20px 20px";
 	}
 	else{
-		div.style.backgroundImage=" url('unlocked.png')";
+		div.style.backgroundImage=" url('unlocked.PNG')";
 		div.style.backgroundSize=" 20px 20px";
 	}
 }
