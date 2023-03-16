@@ -161,6 +161,6 @@
 	display:flex;
 }
 #flexCheckDefault2{
-	backgroundImage= url('unlocked.PNG')";
-	backgroundSize=20px 20px;
+	background-image: url('unlocked.PNG');
+	background-size:20px 20px;
 }
