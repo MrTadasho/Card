@@ -326,13 +326,13 @@ function fusionTemps(k){
 	}
 	return(res)
 }
-function testTile(k,i){
+function testTile(k,i){/*
 	if(k.length==0){
 		for(var j=0; j< tileList[i].length;j++){
 				tileList[i][j].remove();
 			}
 		dss[i][8]=true;
-	}
+	}*\
 }
 var fontclo = 79
 function fontplus(){
