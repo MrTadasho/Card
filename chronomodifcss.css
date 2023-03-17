@@ -151,6 +151,12 @@
 	position:relative;
 	left:0px;
 }
+#basic-addon3{
+	width:100px;
+	justify-content:center;
+	height:39px;
+	margin-top:2px;
+}
 #basic-addon2{
 	width:100px;
 	justify-content:center;
