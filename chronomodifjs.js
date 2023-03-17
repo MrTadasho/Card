@@ -508,7 +508,7 @@ function asktempssup(){/*
 	divparent.appendChild(div);
 	alert(inputa.id);
 	nbttsup=(parseInt(nbttsup)+1).toString();
-}*/
+*/}
 function formathour(k){
 	if(k.includes('h')){
 		if(k.split('h')[1]==''){
