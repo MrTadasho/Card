@@ -58,6 +58,7 @@ function createTile() {
 	dureeTiersObj2 = addTemps(dureeObj.value.split(":"),getTiers(dureeObj.value.split(":")));
     dureeAnticipeObj2 = addTemps(getTiers(dureeObj.value.split(":")),getTiers(dureeObj.value.split(":"))); 
 	dureeAnticipeObj2 = exams(dureeAnticipeObj2);
+	dureeAnticipeObj2 = [updateTime(dureeAnticipeObj2[0]),updateTime(dureeAnticipeObj2[1]),updateTime(dureeAnticipeObj2[2])];
 	var tile = document.createElement("div");
     tile.className = "card text-black bg-white mb-3 mx-2 col-sm col-xs-12";
 	tile.idName = "box";
