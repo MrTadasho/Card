@@ -487,7 +487,7 @@ function Hide(){
 	isHide=!isHide;
 }
 var nbttsup = "0";
-function asktempssup(){
+function asktempssup(){/*
 	var div = document.createElement('div'); 
 	div.style.display="flex";
 	div.style.marginTop="15px";
@@ -508,7 +508,7 @@ function asktempssup(){
 	divparent.appendChild(div);
 	alert(inputa.id);
 	nbttsup=(parseInt(nbttsup)+1).toString();
-}
+}*/
 function formathour(k){
 	if(k.includes('h')){
 		if(k.split('h')[1]==''){
