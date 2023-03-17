@@ -57,6 +57,7 @@ function createTile() {
 	dureeDebutObj.value = formathour(dureeDebutObj.value);}
 	dureeTiersObj2 = addTemps(dureeObj.value.split(":"),getTiers(dureeObj.value.split(":")));
     dureeAnticipeObj2 = addTemps(getTiers(dureeObj.value.split(":")),getTiers(dureeObj.value.split(":"))); 
+	dureeAnticipeObj2 = exams(dureeAnticipeObj2);
 	var tile = document.createElement("div");
     tile.className = "card text-black bg-white mb-3 mx-2 col-sm col-xs-12";
 	tile.idName = "box";
@@ -556,5 +557,12 @@ function modifier(){
 	deroule()
 	menumodifier.style.visibility='visible';
 }*/
+function exams(k){
+	const checkexams = document.getElementById('isExam');
+	if (checkexams.checked){
+		k=[01,00,00];
+	}
+	return k;
+}
 currentTime();
 //createTile();
