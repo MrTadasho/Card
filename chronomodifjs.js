@@ -332,7 +332,7 @@ function testTile(k,i){/*
 				tileList[i][j].remove();
 			}
 		dss[i][8]=true;
-	}*\
+	}*/
 }
 var fontclo = 79
 function fontplus(){
