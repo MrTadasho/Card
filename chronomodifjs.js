@@ -483,13 +483,13 @@ function Hide(){
 				lis[i].style.visibility='visible';
 				but.style.left="320px";
 				but.innerHTML ="Masquer";
-				but.style.width:"100px";
+				but.style.width="100px";
 			}
 			else{
 				if(shdpe){
 					lis[i].style.visibility='visible';
 					but.innerHTML ="Masquer";
-					but.style.width:"100px";
+					but.style.width="100px";
 				}
 			}
 		}
