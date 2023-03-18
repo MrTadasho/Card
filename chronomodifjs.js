@@ -4,7 +4,6 @@ var ClockTile=document.getElementById('clocktile');
 var textHolder=document.getElementById('textHolder');
 
 var matiereObj = document.getElementById("form-matiere");
-var groupeObj = document.getElementById("form-groupe");
 var professeurObj = document.getElementById("form-professeur");
 var dureeObj = document.getElementById("form-duree");
 var dureeAnticipeObj2=0;
@@ -175,11 +174,12 @@ function createTile() {
 	lockds.push(false);
 	dureeObj.value='';
 	matiereObj.value='';
-	groupeObj.value='';
 	professeurObj.value='';
 	dureeDebutObj.value='';
 	dureeAnticipeObj2=0;
 	dureeTiersObj2 = 0;
+	const checkexams = document.getElementById('isExam');
+	checkexams.checked=false;
 }
 
 function buttonDS() {
