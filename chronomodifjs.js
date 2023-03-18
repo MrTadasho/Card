@@ -480,16 +480,16 @@ function hideall(){
 	}
 	for(var i=0;i<lis.length;i++){
 		if(isHide){
-			if(i!=5){
+			if(i==9){
+				for(var j=0;j<lis[i].length;j++){
+					lis[i][j].visibility='visible';
+				}
+			}
+			else if(i!=5){
 				lis[i].style.visibility='visible';
 				but.style.left="320px";
 				but.innerHTML ="Masquer";
 				but.style.width="100px";
-			}
-			else if(i==9){
-				for(var j=0;j<lis[i].length;j++){
-					lis[i][j].visibility='visible';
-				}
 			}
 			else{
 				if(shdpe){
