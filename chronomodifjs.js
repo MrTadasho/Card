@@ -483,6 +483,8 @@ function hideall(){
 			if(i==9){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='visible';
+					var divtext = lis[i][j].nextSibling;
+					divtext.syle.left="auto";
 				}
 			}
 			else if(i!=5){
@@ -503,6 +505,8 @@ function hideall(){
 			if(i==9){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='hidden';
+					var divtext = lis[i][j].nextSibling;
+					divtext.syle.left="0px";
 				}
 			}
 			else{
