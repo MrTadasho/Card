@@ -474,7 +474,7 @@ function Hide(){
 	catch(error){
 		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor];
 		for(var i =0;i<dss.length;i++){
-			lis.push(i);
+			lis.push(i.toString());
 		}
 	}
 	for(var i=0;i<lis.length;i++){
