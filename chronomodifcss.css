@@ -159,8 +159,9 @@
 	display:inline-block;	
 }
 #isExam{
+	position:relative;
 	display:inline-block;	
-	margin-top:5px;
+	margin-top:10px;
 }
 #basic-addon2{
 	width:100px;
