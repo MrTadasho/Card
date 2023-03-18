@@ -484,7 +484,7 @@ function hideall(){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='visible';
 					var divtext = lis[i][j].nextSibling;
-					divtext.style.left="15px";
+					divtext.style.left='';
 				}
 			}
 			else if(i!=5){
@@ -506,7 +506,7 @@ function hideall(){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='hidden';
 					var divtext = lis[i][j].nextSibling;
-					divtext.style.left="0px";
+					divtext.style.left="-10px";
 				}
 			}
 			else{
