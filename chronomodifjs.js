@@ -466,7 +466,7 @@ function shodepe2(){
 	}
 }
 var isHide=false;
-function Hide(){
+function hideall(){
 	var but = document.getElementById('hide');
 	try{
 		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,flexCheckDefault,flexCheckDefault2,bpl1];
