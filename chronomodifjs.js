@@ -86,7 +86,8 @@ function createTile() {
 	var boutton = document.createElement("button");
 	boutton.className ="btn btn-outline-dark";
 	boutton.innerHTML="";
-	boutton.id=selecteds.length;
+	boutton.id="boutonaff";
+	boutton.value=selecteds.length;
 	boutton.style.display="inline-block";
 	boutton.addEventListener('click',function(){});
 	var startTime = document.createElement("p");
@@ -97,8 +98,9 @@ function createTile() {
 	startTime.style.marginLeft="10px";
 	var boutton2 = document.createElement("button");
 	boutton2.className ="btn btn-outline-dark";
-	boutton2.id=selecteds.length;
+	boutton2.value=selecteds.length;
 	boutton2.innerHTML="";
+	boutton2.id="boutonaff";
 	boutton2.style.display="inline-block";
 	boutton2.addEventListener('click',function(){});
 	var endTime = document.createElement("p");
@@ -109,10 +111,11 @@ function createTile() {
 	endTime.style.marginLeft="10px";
 	var boutton3 = document.createElement("button");
 	boutton3.className ="btn btn-outline-dark";
-	boutton3.id=selecteds.length;
+	boutton3.value=selecteds.length;
 	boutton3.innerHTML="";
+	boutton3.id="boutonaff";
 	boutton3.style.display="inline-block";
-	boutton3.addEventListener('click',function(){if(lockds[this.id]==false){tilePreview.remove();AllTile[this.id].shift();testTile(AllTile[this.id],this.id);}});
+	boutton3.addEventListener('click',function(){if(lockds[this.value]==false){tilePreview.remove();AllTile[this.value].shift();testTile(AllTile[this.value],this.value);}});
 	var previewEndTime = document.createElement("p");
     previewEndTime.className = "card-text my-1 texttiletext";
     previewEndTime.innerHTML = "<i>Sortie anticipée: </i>" + "<b><u>En attente (" + fusionTemps(dureeAnticipeObj2).replace(":", "h") + ")</u></b>";
@@ -121,9 +124,10 @@ function createTile() {
 	previewEndTime.style.marginLeft="10px";
 	var boutton4 = document.createElement("button");
 	boutton4.className ="btn btn-outline-dark";
-	boutton4.id=selecteds.length;
+	boutton4.value=selecteds.length;
 	boutton4.innerHTML="";
-	boutton4.addEventListener('click',function(){if(lockds[parseInt(this.id)]==false){tileTier.remove();AllTile[parseInt(this.id)].shift();testTile(AllTile[parseInt(this.id)],parseInt(this.id));}});
+	boutton4.id="boutonaff";
+	boutton4.addEventListener('click',function(){if(lockds[parseInt(this.value)]==false){tileTier.remove();AllTile[parseInt(this.value)].shift();testTile(AllTile[parseInt(this.value)],parseInt(this.value));}});
 	boutton4.style.display="inline-block";
 	var tiersEndTime = document.createElement("p");
     tiersEndTime.className = "card-text my-1 texttiletext";
@@ -469,13 +473,10 @@ var isHide=false;
 function hideall(){
 	var but = document.getElementById('hide');
 	try{
-		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,flexCheckDefault,flexCheckDefault2,bpl1];
+		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,flexCheckDefault,flexCheckDefault2,bpl1,boutonaff];
 	}
 	catch(error){
 		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor];
-		for(var i =0;i<dss.length;i++){
-			lis.push(i.toString());
-		}
 	}
 	for(var i=0;i<lis.length;i++){
 		if(isHide){
