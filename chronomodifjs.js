@@ -91,9 +91,9 @@ function createTile() {
 	boutton.style.display="inline-block";
 	boutton.addEventListener('click',function(){});
 	var startTime = document.createElement("p");
-    startTime.className = "card-text my-1 texttiletext";
-    startTime.innerHTML = "<i>Heure de début: </i>" + "<b><u>En attente</u></b>";
-    startTime.id = "starttime-" + (selecteds.length + 1);
+    	startTime.className = "card-text my-1 texttiletext";
+    	startTime.innerHTML = "<i>Heure de début: </i>" + "<b><u>En attente</u></b>";
+    	startTime.id = "starttime-" + (selecteds.length + 1);
 	startTime.style.display="inline-block";
 	startTime.style.marginLeft="10px";
 	var boutton2 = document.createElement("button");
@@ -484,7 +484,7 @@ function hideall(){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='visible';
 					var divtext = lis[i][j].nextSibling;
-					divtext.style.left='';
+					divtext.style.marginLeft='10px';
 				}
 			}
 			else if(i!=5){
@@ -506,7 +506,7 @@ function hideall(){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='hidden';
 					var divtext = lis[i][j].nextSibling;
-					divtext.style.left="0px";
+					divtext.style.marginLeft="0px";
 				}
 			}
 			else{
