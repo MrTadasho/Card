@@ -471,7 +471,7 @@ function Hide(){
 	try{
 		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,flexCheckDefault,flexCheckDefault2,bpl1];
 	}
-	catch(){
+	catch(error){
 		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor];
 	}
 	for(var i=0;i<lis.length;i++){
