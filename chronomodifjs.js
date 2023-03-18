@@ -483,11 +483,13 @@ function Hide(){
 				lis[i].style.visibility='visible';
 				but.style.left="320px";
 				but.innerHTML ="Masquer";
+				but.style.width:"100px";
 			}
 			else{
 				if(shdpe){
 					lis[i].style.visibility='visible';
 					but.innerHTML ="Masquer";
+					but.style.width:"100px";
 				}
 			}
 		}
@@ -495,6 +497,7 @@ function Hide(){
 		lis[i].style.visibility='hidden';
 		but.style.left="20px";
 		but.innerHTML ="";
+		but.style.width="10px";
 	}
 	}
 	isHide=!isHide;
