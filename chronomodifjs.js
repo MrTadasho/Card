@@ -474,16 +474,19 @@ function Hide(){
 			if(i!=5){
 				lis[i].style.visibility='visible';
 				but.style.left="320px";
+				but.innerHTML ="";
 			}
 			else{
 				if(shdpe){
 					lis[i].style.visibility='visible';
+					but.innerHTML ="";
 				}
 			}
 		}
 		else{
 		lis[i].style.visibility='hidden';
 		but.style.left="20px";
+		but.innerHTML ="Masquer";
 	}
 	}
 	isHide=!isHide;
