@@ -500,7 +500,7 @@ function hideall(){
 			}
 		}
 		else{
-			if(i==p){
+			if(i==9){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].visibility='hidden';
 				}
