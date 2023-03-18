@@ -506,7 +506,7 @@ function hideall(){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='hidden';
 					var divtext = lis[i][j].nextSibling;
-					divtext.style.marginLeft="0px";
+					divtext.style.marginLeft="-10px";
 				}
 			}
 			else{
