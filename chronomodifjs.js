@@ -473,25 +473,28 @@ function Hide(){
 	}
 	catch(error){
 		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor];
+		for(var i =0;i<dss.length;i++){
+			lis.push(i);
+		}
 	}
 	for(var i=0;i<lis.length;i++){
 		if(isHide){
 			if(i!=5){
 				lis[i].style.visibility='visible';
 				but.style.left="320px";
-				but.innerHTML ="";
+				but.innerHTML ="Masquer";
 			}
 			else{
 				if(shdpe){
 					lis[i].style.visibility='visible';
-					but.innerHTML ="";
+					but.innerHTML ="Masquer";
 				}
 			}
 		}
 		else{
 		lis[i].style.visibility='hidden';
 		but.style.left="20px";
-		but.innerHTML ="Masquer";
+		but.innerHTML ="";
 	}
 	}
 	isHide=!isHide;
