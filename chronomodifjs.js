@@ -468,7 +468,7 @@ function shodepe2(){
 var isHide=false;
 function Hide(){
 	var but = document.getElementById('hide');
-	var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor];
+	var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,flexCheckDefault,flexCheckDefault2,bpl1];
 	for(var i=0;i<lis.length;i++){
 		if(isHide){
 			if(i!=5){
