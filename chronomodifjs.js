@@ -500,8 +500,10 @@ function hideall(){
 			}
 		}
 		else{
-			for(var j=0;j<lis[i].length;j++){
-				lis[i][j].visibility='hidden';
+			if(i==p){
+				for(var j=0;j<lis[i].length;j++){
+					lis[i][j].visibility='hidden';
+				}
 			}
 			else{
 				lis[i].style.visibility='hidden';
