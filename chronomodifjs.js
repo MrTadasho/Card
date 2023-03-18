@@ -481,15 +481,18 @@ function hideall(){
 	for(var i=0;i<lis.length;i++){
 		if(isHide){
 			if(i!=5){
-				console.log(lis[i].length);
 				lis[i].style.visibility='visible';
 				but.style.left="320px";
 				but.innerHTML ="Masquer";
 				but.style.width="100px";
 			}
+			else if(i==9){
+				for(var j=0;j<lis[i].length;j++){
+					lis[i][j].visibility='visible';
+				}
+			}
 			else{
 				if(shdpe){
-					console.log(lis[i].length);
 					lis[i].style.visibility='visible';
 					but.innerHTML ="Masquer";
 					but.style.width="100px";
@@ -497,11 +500,15 @@ function hideall(){
 			}
 		}
 		else{
-		console.log(lis[i].length);
-		lis[i].style.visibility='hidden';
-		but.style.left="20px";
-		but.innerHTML ="";
-		but.style.width="10px";
+			for(var j=0;j<lis[i].length;j++){
+				lis[i][j].visibility='hidden';
+			}
+			else{
+				lis[i].style.visibility='hidden';
+				but.style.left="20px";
+				but.innerHTML ="";
+				but.style.width="10px";
+			}
 	}
 	}
 	isHide=!isHide;
