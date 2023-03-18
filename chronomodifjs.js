@@ -481,6 +481,7 @@ function hideall(){
 	for(var i=0;i<lis.length;i++){
 		if(isHide){
 			if(i!=5){
+				console.log(lis[i]);
 				lis[i].style.visibility='visible';
 				but.style.left="320px";
 				but.innerHTML ="Masquer";
@@ -488,6 +489,7 @@ function hideall(){
 			}
 			else{
 				if(shdpe){
+					console.log(lis[i]);
 					lis[i].style.visibility='visible';
 					but.innerHTML ="Masquer";
 					but.style.width="100px";
@@ -495,6 +497,7 @@ function hideall(){
 			}
 		}
 		else{
+		console.log(lis[i]);
 		lis[i].style.visibility='hidden';
 		but.style.left="20px";
 		but.innerHTML ="";
