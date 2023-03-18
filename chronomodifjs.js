@@ -485,7 +485,7 @@ function hideall(){
 					lis[i][j].style.visibility='visible';
 					var divtext = lis[i][j].nextSibling;
 					console.log(divtext);
-					divtext.syle.left="auto";
+					divtext.style.left="auto";
 				}
 			}
 			else if(i!=5){
@@ -508,7 +508,7 @@ function hideall(){
 					lis[i][j].style.visibility='hidden';
 					var divtext = lis[i][j].nextSibling;
 					console.log(divtext);
-					divtext.syle.left="0px";
+					divtext.style.left="0px";
 				}
 			}
 			else{
