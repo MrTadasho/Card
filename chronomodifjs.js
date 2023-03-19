@@ -607,7 +607,7 @@ fullscreenButton.addEventListener("click", function() {
   } else {
     document.documentElement.requestFullscreen();
     divfullscreen.style.backgroundImage=" url('fullscreenof.png')";
-    divfullscreen.style.backgroundSize=" 18px 18px";
+    divfullscreen.style.backgroundSize=" 20px 20px";
   }
 });
 
