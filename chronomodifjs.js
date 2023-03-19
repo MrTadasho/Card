@@ -602,11 +602,11 @@ fullscreenButton.addEventListener("click", function() {
   const divfullscreen = document.getElementById('fullscreen');
   if (document.fullscreenElement) {
     document.exitFullscreen();
-    divfullscreen.style.backgroundImage=" url('fullscreenon.PNG')";
+    divfullscreen.style.backgroundImage=" url('fullscreenon.png')";
     divfullscreen.style.backgroundSize=" 18px 18px";
   } else {
     document.documentElement.requestFullscreen();
-    divfullscreen.style.backgroundImage=" url('fullscreenonof.PNG')";
+    divfullscreen.style.backgroundImage=" url('fullscreenof.png')";
     divfullscreen.style.backgroundSize=" 18px 18px";
   }
 });
