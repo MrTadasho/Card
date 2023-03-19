@@ -599,10 +599,15 @@ function exams(k){
 var fullscreenButton = document.getElementById("fullscreen");
 
 fullscreenButton.addEventListener("click", function() {
+  const divfullscreen = document.getElementById('fullscreen');
   if (document.fullscreenElement) {
     document.exitFullscreen();
+    divfullscreen.style.backgroundImage=" url('fullscreenon.PNG')";
+    divfullscreen.style.backgroundSize=" 20px 20px";
   } else {
     document.documentElement.requestFullscreen();
+    divfullscreen.style.backgroundImage=" url('fullscreenonof.PNG')";
+    divfullscreen.style.backgroundSize=" 20px 20px";
   }
 });
 
