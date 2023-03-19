@@ -596,5 +596,15 @@ function exams(k){
 	}
 	return k;
 }
+var fullscreenButton = document.getElementById("fullscreen");
+
+fullscreenButton.addEventListener("click", function() {
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  } else {
+    document.documentElement.requestFullscreen();
+  }
+});
+
 currentTime();
 //createTile();
