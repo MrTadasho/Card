@@ -473,10 +473,10 @@ var isHide=false;
 function hideall(){
 	var but = document.getElementById('hide');
 	try{
-		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,flexCheckDefault,flexCheckDefault2,bpl1,boutonaff];
+		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,fullscreen,flexCheckDefault,flexCheckDefault2,bpl1,boutonaff];
 	}
 	catch(error){
-		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor];
+		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,fullscreen];
 	}
 	for(var i=0;i<lis.length;i++){
 		if(isHide){
@@ -603,11 +603,11 @@ fullscreenButton.addEventListener("click", function() {
   if (document.fullscreenElement) {
     document.exitFullscreen();
     divfullscreen.style.backgroundImage=" url('fullscreenon.PNG')";
-    divfullscreen.style.backgroundSize=" 20px 20px";
+    divfullscreen.style.backgroundSize=" 18px 18px";
   } else {
     document.documentElement.requestFullscreen();
     divfullscreen.style.backgroundImage=" url('fullscreenonof.PNG')";
-    divfullscreen.style.backgroundSize=" 20px 20px";
+    divfullscreen.style.backgroundSize=" 18px 18px";
   }
 });
 
