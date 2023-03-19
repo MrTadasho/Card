@@ -603,7 +603,7 @@ fullscreenButton.addEventListener("click", function() {
   if (document.fullscreenElement) {
     document.exitFullscreen();
     divfullscreen.style.backgroundImage=" url('fullscreenon.png')";
-    divfullscreen.style.backgroundSize=" 28px 28px";
+    divfullscreen.style.backgroundSize=" 30px 30px";
   } else {
     document.documentElement.requestFullscreen();
     divfullscreen.style.backgroundImage=" url('fullscreenof.png')";
