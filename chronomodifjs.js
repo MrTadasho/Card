@@ -490,6 +490,7 @@ function hideall(){
 				}
 			}
 			else if(i==6 || i==7 || i== 8){
+				console.log(lis[i]);
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='visible';
 				}
@@ -517,6 +518,7 @@ function hideall(){
 				}
 			}
 			else if(i==6 || i==7 || i== 8){
+				console.log(lis[i]);
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='visible';
 				}
