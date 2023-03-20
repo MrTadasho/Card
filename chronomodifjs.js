@@ -480,6 +480,7 @@ function hideall(){
 	}
 	for(var i=0;i<lis.length;i++){
 		console.log(lis[i]);
+		console.log(i);
 		if(isHide){
 			if(i==9){
 				for(var j=0;j<lis[i].length;j++){
