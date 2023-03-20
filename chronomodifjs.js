@@ -474,6 +474,7 @@ function hideall(){
 	var but = document.getElementById('hide');
 	try{
 		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,flexCheckDefault,flexCheckDefault2,bpl1,boutonaff,fullscreen];
+                alert('a');
 	}
 	catch(error){
 		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,fullscreen];
