@@ -489,9 +489,14 @@ function hideall(){
 			}
 			else if(i==6 || i==7 || i== 8){
 				console.log(lis[i]);
+                                if(lis[i].length>0){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='visible';
-				}
+				}}
+                                else{
+                                        lis[i].style.visibility='visible';
+                                        alert('aller');
+                                }
 			}
 			else if(i!=5){
 				lis[i].style.visibility='visible';
@@ -517,9 +522,14 @@ function hideall(){
 			}
 			else if(i==6 || i==7 || i== 8){
 				console.log(lis[i]);
+                                if(lis[i].length>0){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='hidden';
-				}
+				}}
+                                else{
+                                        lis[i].style.visibility='visible';
+                                        alert('aller');
+                                }
 			}
 			else{
 				lis[i].style.visibility='hidden';
