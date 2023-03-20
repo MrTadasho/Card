@@ -504,7 +504,7 @@ function hideall(){
 			}
 		}
 		else{
-			if(i==9){
+			if(i==9 || i==6 || i==7 || i== 8){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='hidden';
 					var divtext = lis[i][j].nextSibling;
