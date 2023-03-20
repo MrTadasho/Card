@@ -482,11 +482,16 @@ function hideall(){
 		console.log(i);
 		console.log(lis[i]);
 		if(isHide){
-			if(i==9 || i==6 || i==7 || i== 8){
+			if(i==9){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='visible';
 					var divtext = lis[i][j].nextSibling;
 					divtext.style.marginLeft='10px';
+				}
+			}
+			else if(i==6 || i==7 || i== 8){
+				for(var j=0;j<lis[i].length;j++){
+					lis[i][j].style.visibility='visible';
 				}
 			}
 			else if(i!=5){
@@ -504,11 +509,16 @@ function hideall(){
 			}
 		}
 		else{
-			if(i==9 || i==6 || i==7 || i== 8){
+			if(i==9){
 				for(var j=0;j<lis[i].length;j++){
 					lis[i][j].style.visibility='hidden';
 					var divtext = lis[i][j].nextSibling;
 					divtext.style.marginLeft="-25px";
+				}
+			}
+			else if(i==6 || i==7 || i== 8){
+				for(var j=0;j<lis[i].length;j++){
+					lis[i][j].style.visibility='visible';
 				}
 			}
 			else{
