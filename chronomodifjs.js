@@ -479,6 +479,8 @@ function hideall(){
 		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,fullscreen];
 	}
 	for(var i=0;i<lis.length;i++){
+		console.log(i);
+		console.log(lis[i]);
 		if(isHide){
 			if(i==9 || i==6 || i==7 || i== 8){
 				for(var j=0;j<lis[i].length;j++){
