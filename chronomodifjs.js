@@ -495,7 +495,6 @@ function hideall(){
 				}}
                                 else{
                                         lis[i].style.visibility='visible';
-                                        alert('aller');
                                 }
 			}
 			else if(i!=5){
@@ -527,8 +526,7 @@ function hideall(){
 					lis[i][j].style.visibility='hidden';
 				}}
                                 else{
-                                        lis[i].style.visibility='visible';
-                                        alert('aller');
+                                        lis[i].style.visibility='hidden';
                                 }
 			}
 			else{
