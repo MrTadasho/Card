@@ -473,7 +473,7 @@ var isHide=false;
 function hideall(){
 	var but = document.getElementById('hide');
 	try{
-		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,fullscreen,flexCheckDefault,flexCheckDefault2,bpl1,boutonaff];
+		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,flexCheckDefault,flexCheckDefault2,bpl1,boutonaff,fullscreen];
 	}
 	catch(error){
 		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,fullscreen];
