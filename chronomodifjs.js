@@ -601,14 +601,14 @@ var fullscreenButton = document.getElementById("fullscreen");
 fullscreenButton.addEventListener("click", function() {
   const divfullscreen = document.getElementById('fullscreen');
   if (document.fullscreenElement) {
-    document.exitFullscreen();
     divfullscreen.style.backgroundImage=" url('fullscreenon.png')";
     divfullscreen.style.backgroundSize=" 30px 30px";
-  } else {
-    document.documentElement.requestFullscreen();
+    document.exitFullscreen();
+    } else {
     divfullscreen.style.backgroundImage=" url('fullscreenof.png')";
     divfullscreen.style.backgroundSize=" 30px 30px";
-  }
+    document.documentElement.requestFullscreen();
+    }
 });
 
 currentTime();
