@@ -161,6 +161,12 @@ function createTile() {
       bodyTile.appendChild(tilePreview);
 	  AllTile.push([1,2]);
     }
+    if (dureeAnticipeObj2[0] <= 1 && dureeObj >=1){
+          tilePreview.append(boutton3);
+	  tilePreview.append(1:00:00);
+      bodyTile.appendChild(tilePreview);
+	  AllTile.push([1,2]);
+    }
 	else{
 		AllTile.push([1]);
 	}
