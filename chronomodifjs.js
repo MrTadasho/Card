@@ -56,12 +56,15 @@ function createTile() {
 	dureeDebutObj.value = formathour(dureeDebutObj.value);}
 	dureeTiersObj2 = addTemps(dureeObj.value.split(":"),getTiers(dureeObj.value.split(":")));
     dureeAnticipeObj2 = addTemps(getTiers(dureeObj.value.split(":")),getTiers(dureeObj.value.split(":"))); 
-	dureeAnticipeObj2 = exams(dureeAnticipeObj2);
 	dureeAnticipeObj2 = [updateTime(dureeAnticipeObj2[0]),updateTime(dureeAnticipeObj2[1]),updateTime(dureeAnticipeObj2[2])];
+	dureeAnticipeObj2 = changeAnticipe(dureeAnticipeObj2,dureeObj.value.split(":"));
+	dureeAnticipeObj2 = exams(dureeAnticipeObj2);
 	var tile = document.createElement("div");
     tile.className = "card text-black bg-white mb-3 mx-2 col-sm col-xs-12";
 	tile.idName = "box";
 	tile.style.position="relative";
+	tile.style.width= "80%";
+	tile.style.left="10%";
 
     var header = document.createElement("div");
     header.className = "card-header d-flex align-items-center";
@@ -92,7 +95,12 @@ function createTile() {
 	boutton.addEventListener('click',function(){});
 	var startTime = document.createElement("p");
     	startTime.className = "card-text my-1 texttiletext";
-    	startTime.innerHTML = "<i>Heure de début: </i>" + "<b><u>En attente</u></b>";
+		if(dureeDebutObj.value.split(":")!=""){
+			startTime.innerHTML = "<i>Heure de début: </i>" + "<b><u>En attente ("+dureeDebutObj.value.replace(":","h")+")</u></b>";
+		}
+		else{
+			startTime.innerHTML = "<i>Heure de début: </i>" + "<b><u>En attente</u></b>";
+		}
     	startTime.id = "starttime-" + (selecteds.length + 1);
 	startTime.style.display="inline-block";
 	startTime.style.marginLeft="10px";
@@ -408,19 +416,20 @@ function move(y1,y2){
 }
 */
 const colorPicker = document.querySelector('#exampleColorInput');
-colorPicker.addEventListener('change', function() {
+colorPicker.addEventListener('input', function() {
 	console.log(colorPicker.value);
     const selectedColor = colorPicker.value;
+	//changeSelectedTextColor(selectedColor);
 	const div=document.getElementById('exampleFormControlTextarea1');
-    div.style.color=selectedColor; // Output the selected color to the console
+    div.style.color=selectedColor;
   });
 const textfontsize = document.getElementById('form-police');
-textfontsize.addEventListener('change',function(){
+textfontsize.addEventListener('input',function(){
 	const div=document.getElementById('exampleFormControlTextarea1');
 	div.style.fontSize=this.value+'px';
 });
 const sizefamily=document.getElementById('form-family');
-sizefamily.addEventListener('change',function(){
+sizefamily.addEventListener('input',function(){
 	const div=document.getElementById('exampleFormControlTextarea1');
 div.style.fontFamily=this.value;});
 var bold=false;
@@ -471,72 +480,49 @@ function shodepe2(){
 }
 var isHide=false;
 function hideall(){
-	var but = document.getElementById('hide');
+	closeNav();
+	var fullscreen = document.getElementById('fullscreen');
 	try{
-		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,flexCheckDefault,flexCheckDefault2,bpl1,boutonaff,fullscreen];
+		var lis = [flexCheckDefault,flexCheckDefault2,bpl1,boutonaff];
 	}
 	catch(error){
-		var lis = [bplus,bmns,shodepe,bpl,statusButton,changecolor,fullscreen];
+		return 
 	}
 	for(var i=0;i<lis.length;i++){
-		if(isHide){
-			if(i==9){
-				for(var j=0;j<lis[i].length;j++){
-					lis[i][j].style.visibility='visible';
-					var divtext = lis[i][j].nextSibling;
-					divtext.style.marginLeft='10px';
+		console.log(lis[i]);
+		if(isHide==false){
+			shdpe=false
+			if(i==0 || i==1 || i==2 || i==3){
+				if(lis[i].length==undefined){
+					lis[i].style.visibility= "hidden";
 				}
-			}
-			else if(i==6 || i==7 || i== 8){
-				console.log(lis[i]);
-                                if(lis[i].length>0){
-				for(var j=0;j<lis[i].length;j++){
-					lis[i][j].style.visibility='visible';
-				}}
-                                else{
-                                        lis[i].style.visibility='visible';
-                                }
-			}
-			else if(i!=5){
-				lis[i].style.visibility='visible';
-				but.style.left="320px";
-				but.innerHTML ="Masquer";
-				but.style.width="100px";
+				else{
+					for(let j=0;j<lis[i].length;j++){
+						lis[i][j].style.visibility= "hidden";
+					}
+				}
 			}
 			else{
-				if(shdpe){
-					lis[i].style.visibility='visible';
-					but.innerHTML ="Masquer";
-					but.style.width="100px";
-				}
+				lis[i].style.visibility= "hidden";
 			}
 		}
 		else{
-			if(i==9){
-				for(var j=0;j<lis[i].length;j++){
-					lis[i][j].style.visibility='hidden';
-					var divtext = lis[i][j].nextSibling;
-					divtext.style.marginLeft="-25px";
+			if(i==0 || i==1 || i==2 || i==3){
+				if(lis[i].length==undefined){
+					lis[i].style.visibility= "visible";
+				}
+				else{
+					for(let j=0;j<lis[i].length;j++){
+						lis[i][j].style.visibility= "visible";
+					}
 				}
 			}
-			else if(i==6 || i==7 || i== 8){
-				console.log(lis[i]);
-                                if(lis[i].length>0){
-				for(var j=0;j<lis[i].length;j++){
-					lis[i][j].style.visibility='hidden';
-				}}
-                                else{
-                                        lis[i].style.visibility='hidden';
-                                }
-			}
 			else{
-				lis[i].style.visibility='hidden';
-				but.style.left="20px";
-				but.innerHTML ="";
-				but.style.width="10px";
+				lis[i].style.visibility= "visible";
 			}
+		}
 	}
-	}
+	
 	isHide=!isHide;
 }
 var nbttsup = "0";
@@ -616,20 +602,132 @@ function exams(k){
 	}
 	return k;
 }
-var fullscreenButton = document.getElementById("fullscreen");
-
-fullscreenButton.addEventListener("click", function() {
-  const divfullscreen = document.getElementById('fullscreen');
+function fullscreen(){
+//const divfullscreen = document.getElementById('fullscreen');
   if (document.fullscreenElement) {
-    divfullscreen.style.backgroundImage=" url('fullscreenon.png')";
-    divfullscreen.style.backgroundSize=" 30px 30px";
+    /*divfullscreen.style.backgroundImage=" url('fullscreenon.png')";
+    divfullscreen.style.backgroundSize=" 30px 30px";*/
     document.exitFullscreen();
     } else {
-    divfullscreen.style.backgroundImage=" url('fullscreenof.png')";
-    divfullscreen.style.backgroundSize=" 30px 30px";
+    /*divfullscreen.style.backgroundImage=" url('fullscreenof.png')";
+    divfullscreen.style.backgroundSize=" 30px 30px";*/
     document.documentElement.requestFullscreen();
-    }
-});
+}
+};
+var sidenav = document.getElementById("mySidenav");
+var openBtn = document.getElementById("openBtn");
+var closeBtn = document.getElementById("closeBtn");
+var returnBtn2 = document.getElementById("returnBtn2");
+var sidenav_side = document.getElementById('sidenav_side');
+var ret = document.getElementById('return');
 
+openBtn.onclick = openNav;
+closeBtn.onclick = closeNav;
+var closedefBtn2 = document.getElementById("closedef");
+closedefBtn2.onclick = closedefNav;
+
+function closedefNav(){
+	sidenav.classList.remove("active");
+	sidenav_side.style.left = '-250px';
+}
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  sidenav.classList.add("active");
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  sidenav.classList.remove("active");
+}
+returnBtn2.addEventListener("mouseenter", function(event) {
+  ret.src = 'Arrow - Left Circle Dark.png';
+});
+returnBtn2.addEventListener("mouseleave", function(event) {
+  ret.src = 'Arrow - Left Circle.png';
+});
+returnBtn2.onclick= closeside;
+function closeside(){
+	sidenav_side.style.left = '-250px';
+}
+function shodepe3(){
+	sidenav_side.style.left = '0px';
+}
+function typo(num,arg){
+	let quoi = {1:'bold',2:'underline',3:'italic',4:'font-size',5:'color',6:'font-style'}
+}
+function changeSelectedTextColor(color) {
+	let pos='';
+  if (window.getSelection) {
+    let selection = window.getSelection();
+    let selectionstr = selection.toString();
+	
+    if (selection.rangeCount > 0){
+		if(selectionstr.includes('</span>') && selectionstr.includes('<span>')){
+			selectionstr.replace('<span>', "");
+			selectionstr.replace('</span>', "");
+			pos=undefined;
+		}
+		else if(selectionstr.includes('</span>')){
+			selectionstr.replace('</span>', "")
+			pos='before';
+		}
+		else if(selectionstr.includes('<span>')){
+			selectionstr.replace('<span>', "")
+			pos='after';
+		}
+		else{
+			pos='undefined';
+		}
+      let range = selection.getRangeAt(0);
+	  range.deleteContents();
+      range.insertNode(document.createTextNode(selectionstr));
+      let span = document.createElement('span');
+      span.style.color = color;
+
+      range.surroundContents(span);
+      selection.removeAllRanges();
+	  if(pos=='before'){
+	  var closingSpan = document.createElement("span");
+      closingSpan.textContent = "</span>";
+      range.insertBefore(closingSpan, 0);
+	  }
+	  else if(pos=='after'){
+		var openingSpan = document.createElement("span");
+		openingSpan.textContent = "<span>";
+		range.appendChild(openingSpan);
+	  }
+
+    }
+  }
+}
+const ClockSize = document.getElementById('form-police-clock');
+ClockSize.addEventListener('input',function (){
+	clockHolder.style.fontSize=ClockSize.value+'px';
+});
+const ClockColor = document.querySelector('#exampleColorInputClock');
+ClockColor.addEventListener('input', function() {
+	console.log(ClockColor.value);
+    const selectedColor = ClockColor.value;
+	//changeSelectedTextColor(selectedColor);
+    clockHolder.style.color=selectedColor;
+  });
+function changeAnticipe(time, duration){
+	console.log(time);
+	console.log(duration);
+	if(time[0]>=1){
+		return time;
+	}
+	else if(time[0]<=1 && duration[0]>=1 && duration[1]>=0 && duration[2]>=0){
+		if(duration[0]==1 && duration[1]==0 && duration[2]==0){
+			return ["00","00","00"];
+		}
+		else{
+			return ["01","00","00"];
+		}
+	}
+	else{
+		return ["00","00","00"];
+	}
+}
 currentTime();
 //createTile();
