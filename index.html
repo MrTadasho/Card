@@ -5,63 +5,121 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="chronomodifcss.css">
-	<title>DS Horaires</title>
+	<title>DS Horaires :)</title>
 </head>
 <body>
-	<!--<button class="btn btn-outline-dark" onclick="deroule()" id="listederoule"></button>-->
-	<button type="button" class="btn btn-outline-dark position-absolute adder" data-bs-toggle="modal" data-bs-target="#exampleModal"id="bpl">
-		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-	  		<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-		</svg>
-	</button>
-
-	<button type="button" class="btn btn-outline-dark position-absolute starter" onclick="buttonDS();" id="statusButton">
-		Commencer le DS
-	</button>
-	<!--<div class="menulat">
-		<div class="menu" id="menu">
-			<div class="menu-bouton-1">
-				<button class="modifer" onclick="modifier()">Modifier</button>
-			</div>
-		</div>
-		<div class="menumodifier" id="menumodifier">
-			<div id="changecolor2">
-				<div id="block2">
-					<p id="douzetroisdeux">Customisation texte</p>
-				</div>
+	<div id="mySidenav" class="sidenav">
+ 	 <a id="closeBtn" href="#" class="close">×</a>
+ 	 <ul>
+ 	   <li><a href="#" onclick="buttonDS()">Commencer les DS</a></li>
+ 	   <li><button type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal"id="bpl">
+		Ajouter un DS
+	</button></li>
+ 	   <li><a href="#" onclick="fullscreen()">Plein écran</a></li>
+ 	   <li><a href="#" onclick="hideall()">Cacher</a></li>
+	   <li><a href="#" onclick="shodepe3()">Modifier la tipo</a></li>
+	   <!--
+	   <li><div class="wrapper">
+	   <a href="#" class="tevv">Test</a>
+	   <div class="a"><p>bonjour</p></div>
+	   </div></li>-->
+	   <li><a href="Aide.pdf" target="_blank">Aide</li>
+	   
+ 	 </ul>
+	</div>
+	<div id="sidenav_side" class="sidenav_side">
+		 <a id="returnBtn2" href="#"><img src='Arrow - Left Circle.png' id="return"></a>
+		 <a id="closedef" href="#">×</a>
+		 <ul>
+			<li>
+				<h3 id="douzetroisdeux">Customisation texte</h3>
+			</li>
+		</br>
+			<li> 
 				<div id="block">
-					<span class="input-group-text" id="basic-addon3">Color Picker</span>
-					<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color" aria-describedby="basic-addon3">
+					<span class="input-group-text" id="basic-addon2">Taille police</span>
+					<input type="text" class="form-control" placeholder="taille (50)" aria-label="police" aria-describedby="basic-addon2" id="form-police">
 				</div>
+			</li>
+		<div class="demibr"></div>
+			<li>
 				<div id="block">
-				<span class="input-group-text" id="basic-addon3">Taille police</span>
-					<input type="text" class="form-control" placeholder="(50)" aria-label="police" aria-describedby="basic-addon3" id="form-police">
+					<span class="input-group-text" id="basic-addon2">Couleur</span>
+					<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color" aria-describedby="basic-addon2">
 				</div>
-				<div id="block">
-				<span class="input-group-text" id="basic-addon3">Style police</span>
-					<input type="text" class="form-control" placeholder="" aria-label="police" aria-describedby="basic-addon3" id="form-family" list="datalistOptions">
-				</div>
-				<datalist id="datalistOptions">
-				  <option value="Arial">
-				  <option value="Helvetica">
-				  <option value="Times New Roman">
-				  <option value="Georgia">
-				  <option value="Verdana">
-				  <option value="Courier New">
-				  <option value="Palatino">
-				  <option value="Garamond">
-				  <option value="Comic Sans MS">
-				  <option value="Impact">
-				</datalist>
-				<div id="block2">
+			</li>
+		<div class="demibr"></div>
+			<li>
+				<div>
 					<button type="button" class="btn btn-dark" onclick="gras()" id="gras">B</button>
 					<button type="button" class="btn btn-dark" onclick="itali()" id="ital">I</button>
 					<button type="button" class="btn btn-dark" onclick="sous()" id="sous">S</button>
 				</div>
-			</div>
-		</div>
-	</div>-->
+			</li>
+		<div class="demibr"></div>
+			<li>
+				<div id="block">
+					<span class="input-group-text" id="basic-addon2">Style police</span>
+					<input type="text" class="form-control" placeholder="police" aria-label="police" aria-describedby="basic-addon2" id="form-family" list="datalistOptions">
+				</div>
+				<datalist id="datalistOptions">
+					<option value="Arial">
+					<option value="Helvetica">
+					<option value="Times New Roman">
+					<option value="Georgia">
+					<option value="Verdana">
+					<option value="Courier New">
+					<option value="Palatino">
+					<option value="Garamond">
+					<option value="Comic Sans MS">
+					<option value="Impact">
+				</datalist>
+			</li>
+		</br>
+			<li>
+				<h3 id="douzetroisdeux">Customisation Horloge</h3>
+			</li>
+		</br>
+			<li>
+				<div id="block">
+					<span class="input-group-text" id="basic-addon2">Taille</span>
+					<input type="text" class="form-control" placeholder="taille (83)" aria-label="police" aria-describedby="basic-addon2" id="form-police-clock">
+				</div>
+			</li>
+		<div class="demibr"></div>
+		<!--
+			<li>
+				<div id="block">
+					<span class="input-group-text" id="basic-addon2">Format</span>
+					<input type="text" class="form-control" placeholder="Format" aria-label="police" aria-describedby="basic-addon2" id="form-family-clock" list="datalistOptionsClock">
+				</div>
+				<datalist id="datalistOptionsClock">
+					<option value="00:00:00">
+					<option value="00h00m00s">
+					<option value="00h00m00">
+					<option value="00:00">
+					<option value="00h00m">
+					<option value="00h00">
+				</datalist>
+			</li>-->
+		<div class="demibr"></div>
+			<li>
+				<div id="block">
+					<span class="input-group-text" id="basic-addon2">Couleur</span>
+					<input type="color" class="form-control form-control-color" id="exampleColorInputClock" value="#563d7c" title="Choose your color" aria-describedby="basic-addon2">
+				</div>
+			</li>
+		</ul>
+	</div>
 
+	<a href="#" id="openBtn">
+  	<span class="burger-icon">
+    	<span></span>
+    	<span></span>
+    	<span></span>
+  	</span>
+	</a>
+	<!--<button class="btn btn-outline-dark" onclick="deroule()" id="listederoule"></button>-->
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
@@ -135,10 +193,6 @@
 		<div class="layer d-flex justify-content-center" id="clocktile">
 			
 			<h1 id="clockHolder" class="display-1"></h1>
-			<div>
-				<button onclick="fontplus()" class="btn btn-outline-dark" id="bplus"><p id="bpp">+</p></button>
-				<button onclick="fontmoins()" class="btn btn-outline-dark" id="bmns"><p id="bmp">-</p></button>
-			</div>
 
 		</div>
 		<div id="textHolder">
@@ -149,41 +203,11 @@
 
 
 	</div>
-	<button class="btn btn-outline-dark position-absolute starter" onclick="shodepe2()" id='shodepe'>Modifier</button>
-	<button class="btn btn-outline-dark position-absolute starter" onclick="hideall()" id='hide'>Masquer</button>
-	<button class="btn btn-outline-dark position-absolute" id="fullscreen"></button>
+	<!--<button class="btn btn-outline-dark position-absolute" id="fullscreen"></button>-->
 
 	<!--<div id="selctpose"></div>-->
-	<div id="changecolor">
-		<p id="douzetroisdeux">Customisation texte</p>
-		<div id="block">
-			<span class="input-group-text" id="basic-addon2">Color Picker</span>
-			<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color" aria-describedby="basic-addon2">
-		</div>
-		<div id="block">
-		<span class="input-group-text" id="basic-addon2">Taille police</span>
-			<input type="text" class="form-control" placeholder="taille (50)" aria-label="police" aria-describedby="basic-addon2" id="form-police">
-		</div>
-		<div id="block">
-		<span class="input-group-text" id="basic-addon2">Style police</span>
-			<input type="text" class="form-control" placeholder="police" aria-label="police" aria-describedby="basic-addon2" id="form-family" list="datalistOptions">
-		</div>
-		<datalist id="datalistOptions">
-		  <option value="Arial">
-		  <option value="Helvetica">
-		  <option value="Times New Roman">
-		  <option value="Georgia">
-		  <option value="Verdana">
-		  <option value="Courier New">
-		  <option value="Palatino">
-		  <option value="Garamond">
-		  <option value="Comic Sans MS">
-		  <option value="Impact">
-		</datalist>
-		<button type="button" class="btn btn-dark" onclick="gras()" id="gras">B</button>
-		<button type="button" class="btn btn-dark" onclick="itali()" id="ital">I</button>
-		<button type="button" class="btn btn-dark" onclick="sous()" id="sous">S</button>
-	</div>
+	<!--<div class="testdemerde">
+	</div>-->
 	<script type="text/javascript" src="chronomodifjs.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
