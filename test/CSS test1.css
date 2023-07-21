@@ -1,0 +1,112 @@
+body{
+	background-image: linear-gradient(-45deg,black,gray,white);
+}
+.menuhor{
+	color: black;
+}
+
+.menuhorimg{
+	width: 60px;
+	height: 60px;
+}
+h1{
+	background-image:url("gif2.gif") ;
+	background-size: cover;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+ul {
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f3f3f3;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 60px;
+	border: 1px solid #e7e7e7
+}
+
+li {
+    float: left;
+	border-right: 1px solid #666;
+	height: 60px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	height: 60px;
+	width: 80px;
+	
+}
+
+li a:hover {
+    background-color: #aaa;
+	height: 60px;
+}
+
+
+
+/* The flip card container - set the width and height to whatever you want. */
+.flip-card {
+	margin-top:100px;
+	float:left;
+    background-color: transparent;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px; /*3d effect*/
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fit, minmax(200px,1fr));
+	gap: 10px;
+}
+.ele {
+	height: 300px;
+	border-radius: 4px;
+}
